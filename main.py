@@ -13,7 +13,6 @@ def index():
 def hello():
     return "Hello"
 
-
 # Вводим любое имя
 @app.route("/hello/<name>")
 def greetings(name):

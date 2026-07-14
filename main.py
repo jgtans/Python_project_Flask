@@ -6,8 +6,9 @@ app = Flask(__name__)
 # Создаем базовый маршрут, для проверки работы нашего сайта
 @app.route("/") # Декоратор
 def index():
+    name = "Mihail"
     # при инициализации функции индекс, во время ретурн тригерется и возвращает index.html
-    return render_template("404.html"), 404
+    return render_template("index.html", name=name)
 
 @app.route("/hello")
 def hello():
@@ -26,7 +27,7 @@ def not_found(e):
 # С помощью этой строчки проверяем, что этот файл является основным
 if __name__ == "__main__":
     # В том случае если наш файл основной, мы хотим запустить приложение, а debug=True - покажет нам ошибку, но не закроет сайт
-    app.run(debug=True)
+    app.run(debug="True")
 
 
 
